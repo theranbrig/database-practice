@@ -109,7 +109,7 @@ CREATE TABLE library (
 Find three books and add their information to the table.
 
 ```sql
-INSERT INTO library (isbn, title, author, genre, publishDate, copies, availableCopies)
+INSERT INTO library (isbn10, title, author, genre, publishDate, copies, availableCopies)
   VALUES
 (0984782869, 'Cracking The Coding Interview', 'Gayle Laakmann McDowell', 'Programming', 'July 1, 2015', 4, 3)
 (0262033844, 'Introduction to Algorithms, 3rd Edition', 'Thomas H. Cormen', 'Programming', 'July 31, 2009', 3, 1)
@@ -133,8 +133,8 @@ DELETE FROM library WHERE isbn=0262033848
 ```sql
 CREATE TABLE satellites (
   id integer,
-  name text,
-  yearLaunched date
+  satelliteName text,
+  yearLaunched date,
   country text,
   missionDescription text,
   orbitingBody text,
@@ -146,11 +146,11 @@ CREATE TABLE satellites (
 Add three non-Earth-orbiting satellites to the table.
 
 ```sql
-INSERT INTO satellites (id, name, yearLaunched, country, missionDescription, orbitingBody, operational, milesFromEarth)
+INSERT INTO satellites (id, satelliteName, yearLaunched, country, missionDescription, orbitingBody, operational, milesFromEarth)
   VALUES
-    (1001, 'ARTEMIS', '2007', 'United States', 'Acceleration, Reconnection, Turbulence and Electrodynamics of the Moon’s Interaction with the Sun', 'The Moon', true, 238000)
-    (1002, '2001 Mars Odyssey', '2001', 'United States', 'Use spectrometers and a thermal imager to detect evidence of past or present water and ice', 'Mars', true, 33900000)
-    (1003, 'Akatsuki', '2010', 'Japan', 'Studying the stratification of the atmosphere, atmospheric dynamics, and cloud physics', 'Venus', true, 162000000)
+    (1001, 'ARTEMIS', '2007', 'United States', 'Acceleration, Reconnection, Turbulence and Electrodynamics of the Moon’s Interaction with the Sun', 'The Moon', 'true', 238000),
+    (1002, '2001 Mars Odyssey', '2001', 'United States', 'Use spectrometers and a thermal imager to detect evidence of past or present water and ice', 'Mars', 'true', 33900000),
+    (1003, 'Akatsuki', '2010', 'Japan', 'Studying the stratification of the atmosphere, atmospheric dynamics, and cloud physics', 'Venus', 'true', 162000000);
 ```
 
 Remove one of the satellites from the table since it has just crashed into the planet.
@@ -162,7 +162,7 @@ DELETE FROM satellites WHERE id=1001
 =Edit another satellite because it is no longer operating and change the value to reflect that.
 
 ```sql
-UPDATE library SET operational=false WHERE id=1002
+UPDATE library SET operational='false' WHERE id=1002
 ```
 
 > Write a command to create a new table to hold the emails in your inbox. This table should include an id, the subject line, the sender, any additional recipients, the body of the email, the timestamp, whether or not you have read the email, and the id of the email chain it's in. Also provide commands that perform the following operations:
@@ -172,7 +172,7 @@ CREATE TABLE inbox (
   id integer,
   subject text,
   sender text,
-  additionalRecipients text[],
+  additionalRecipients text ARRAY,
   body text,
   received date,
   read boolean,
@@ -185,9 +185,9 @@ Add three new emails to the inbox.
 ```sql
 INSERT INTO inbox (id, subject, sender, additionalRecipients, body, received, read, chainId)
   VALUES
-  (000001, 'Welcome', 'bill@email.com', {mary@email.com, mike@email.com, jim@email.com}, 'Welcome to our new group chat.  We hope you get a lot out of it.', 'Jan-08-2009', true, 009 )
-  (000002, 'Thanks for having me', 'mary@email.com', {bill@email.com, mike@email.com, jim@email.com}, 'Thanks for having me.  I really look forward to it.', 'Jan-09-2009', true, 009 )
-  (000003, 'Big Help', 'mike@email.com', {mary@email.com, bill@email.com, jim@email.com}, 'This will really help to streamline efficiency here at the office', 'Jan-10-2009', true, 009 )
+  (000001, 'Welcome', 'bill@email.com', '{"mary@email.com", "mike@email.com", "jim@email.com"}', 'Welcome to our new group chat.  We hope you get a lot out of it.', 'Jan-08-2009', 'true', 009 ),
+  (000002, 'Thanks for having me', 'mary@email.com', '{"bill@email.com", "mike@email.com", "jim@email.com"}', 'Thanks for having me.  I really look forward to it.', 'Jan-09-2009', 'true', 009 ),
+  (000003, 'Big Help', 'mike@email.com', '{"mary@email.com", "bill@email.com", "jim@email.com"}', 'This will really help to streamline efficiency here at the office', 'Jan-10-2009', 'true', 009 );
 ```
 
 You deleted one of the emails, so write a command to remove the row from the inbox table.
@@ -199,5 +199,5 @@ DELETE FROM inbox WHERE id=000003
 You started reading an email but just heard a crash in another room. Mark the email as unread before investigating the crash, so you can come back and read it later.
 
 ```sql
-UPDATE inbox SET read=false WHERE id=000002
+UPDATE inbox SET read='false' WHERE id=000002
 ```
