@@ -4,11 +4,11 @@ Answer the following questions and submit the responses.
 
 > Write out a generic SELECT statement.
 
-`SELECT <ColumnName1, ColumnName1, Etc.> FROM <TABLE NAME> WHERE <ColumnName> <LIKE/OPERATOR> <Condition>`
+`SELECT <ColumnName1, ColumnName1, Etc.> FROM <TABLE NAME> WHERE <ColumnName or Parameter> <LIKE/OPERATOR> <Condition>`
 
 > Create a fun way to remember the order of operations in a SELECT statement, such as a mnemonic.
 
-Small Frogs Will Leap (SELECT FROM WHERE LIKE)
+Small Frogs Will Leap or Crawl (**S**ELECT **F**ROM **W**HERE **L**IKE **or** **C**ONDITIONAL)
 
 > Given this dogs table, write queries to select the following pieces of data:
 
