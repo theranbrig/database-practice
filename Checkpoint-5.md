@@ -118,3 +118,17 @@ Nala
 **id**
 3
 4
+
+## Resubmission
+
+Choose one cat of each age to show to potential adopters.
+
+```sql
+SELECT DISTINCT age FROM cats;
+```
+
+Find all of the names of the cats, so you don’t choose duplicate names for new cats.
+
+```sql
+SELECT DISTINCT name FROM cats;
+```
