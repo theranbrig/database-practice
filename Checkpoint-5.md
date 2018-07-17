@@ -132,3 +132,11 @@ Find all of the names of the cats, so you don’t choose duplicate names for new
 ```sql
 SELECT DISTINCT name FROM cats;
 ```
+
+## Resubmission
+
+Choose one cat of each age to show to potential adopters.
+
+```sql
+SELECT MIN(name), age FROM cats GROUP BY age;
+```
