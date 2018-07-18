@@ -1,7 +1,4 @@
-Exercises
-Submit your answers to the following questions.
-
-NOTE: Real-world examples must be your own and not based on the text or previous assignments.
+# Exercises
 
 > How do you find related data held in two separate data tables?
 
@@ -58,31 +55,31 @@ ORDER BY scheduled_shifts.shift_id;
 
 **RESULTS**
 
-id | date | start_time | end_time | employee_id | shift_id | id | name
----|------|------------|----------|-------------|----------|----|-----
-5 | 1998-03-09 | 16:00:00 | 20:00:00 | 5 | 1 | 5 | Padma Patil
-1 | 1998-03-09 | 08:00:00 | 12:00:00 | 1 | 2 | 1 | Hermione Granger
-3 | 1998-03-09 | 12:00:00 | 16:00:00 | 3 | 3 | 3 | Luna Lovegood
-5 | 1998-03-09 | 16:00:00 | 20:00:00 | 5 | 4 | 5 | Padma Patil
-9 | 1998-03-10 | 12:00:00 | 20:00:00 | 9 | 5 | 9 | Dean Thomas
-5 | 1998-03-09 | 16:00:00 | 20:00:00 | 5 | 6 | 5 | Padma Patil
-1 | 1998-03-09 | 08:00:00 | 12:00:00 | 1 | 7 | 1 | Hermione Granger
-2 | 1998-03-09 | 08:00:00 | 16:00:00 | 2 | 8 | 2 | Ronald Weasley
-5 | 1998-03-09 | 16:00:00 | 20:00:00 | 5 | 9 | 5 | Padma Patil
-9 | 1998-03-10 | 12:00:00 | 20:00:00 | 9 | 10 | 9 | Dean Thomas
-5 | 1998-03-09 | 16:00:00 | 20:00:00 | 5 | 11 | 5 | Padma Patil
-1 | 1998-03-09 | 08:00:00 | 12:00:00 | 1 | 12 | 1 | Hermione Granger
-3 | 1998-03-09 | 12:00:00 | 16:00:00 | 3 | 13 | 3 | Luna Lovegood
-5 | 1998-03-09 | 16:00:00 | 20:00:00 | 5 | 14 | 5 | Padma Patil
-4 | 1998-03-09 | 12:00:00 | 20:00:00 | 4 | 15 | 4 | Draco Malfoy
-1 | 1998-03-09 | 08:00:00 | 12:00:00 | 1 | 17 | 1 | Hermione Granger
-2 | 1998-03-09 | 08:00:00 | 16:00:00 | 2 | 18 | 2 | Ronald Weasley
-8 | 1998-03-10 | 12:00:00 | 16:00:00 | 8 | 19 | 8 | Cho Chang
-4 | 1998-03-09 | 12:00:00 | 20:00:00 | 4 | 20 | 4 | Draco Malfoy
-1 | 1998-03-09 | 08:00:00 | 12:00:00 | 1 | 22 | 1 | Hermione Granger
-3 | 1998-03-09 | 12:00:00 | 16:00:00 | 3 | 23 | 3 | Luna Lovegood
-8 | 1998-03-10 | 12:00:00 | 16:00:00 | 8 | 24 | 8 | Cho Chang
-4 | 1998-03-09 | 12:00:00 | 20:00:00 | 4 | 25 | 4 | Draco Malfoy
+| id  | date       | start_time | end_time | employee_id | shift_id | id  | name             |
+| --- | ---------- | ---------- | -------- | ----------- | -------- | --- | ---------------- |
+| 5   | 1998-03-09 | 16:00:00   | 20:00:00 | 5           | 1        | 5   | Padma Patil      |
+| 1   | 1998-03-09 | 08:00:00   | 12:00:00 | 1           | 2        | 1   | Hermione Granger |
+| 3   | 1998-03-09 | 12:00:00   | 16:00:00 | 3           | 3        | 3   | Luna Lovegood    |
+| 5   | 1998-03-09 | 16:00:00   | 20:00:00 | 5           | 4        | 5   | Padma Patil      |
+| 9   | 1998-03-10 | 12:00:00   | 20:00:00 | 9           | 5        | 9   | Dean Thomas      |
+| 5   | 1998-03-09 | 16:00:00   | 20:00:00 | 5           | 6        | 5   | Padma Patil      |
+| 1   | 1998-03-09 | 08:00:00   | 12:00:00 | 1           | 7        | 1   | Hermione Granger |
+| 2   | 1998-03-09 | 08:00:00   | 16:00:00 | 2           | 8        | 2   | Ronald Weasley   |
+| 5   | 1998-03-09 | 16:00:00   | 20:00:00 | 5           | 9        | 5   | Padma Patil      |
+| 9   | 1998-03-10 | 12:00:00   | 20:00:00 | 9           | 10       | 9   | Dean Thomas      |
+| 5   | 1998-03-09 | 16:00:00   | 20:00:00 | 5           | 11       | 5   | Padma Patil      |
+| 1   | 1998-03-09 | 08:00:00   | 12:00:00 | 1           | 12       | 1   | Hermione Granger |
+| 3   | 1998-03-09 | 12:00:00   | 16:00:00 | 3           | 13       | 3   | Luna Lovegood    |
+| 5   | 1998-03-09 | 16:00:00   | 20:00:00 | 5           | 14       | 5   | Padma Patil      |
+| 4   | 1998-03-09 | 12:00:00   | 20:00:00 | 4           | 15       | 4   | Draco Malfoy     |
+| 1   | 1998-03-09 | 08:00:00   | 12:00:00 | 1           | 17       | 1   | Hermione Granger |
+| 2   | 1998-03-09 | 08:00:00   | 16:00:00 | 2           | 18       | 2   | Ronald Weasley   |
+| 8   | 1998-03-10 | 12:00:00   | 16:00:00 | 8           | 19       | 8   | Cho Chang        |
+| 4   | 1998-03-09 | 12:00:00   | 20:00:00 | 4           | 20       | 4   | Draco Malfoy     |
+| 1   | 1998-03-09 | 08:00:00   | 12:00:00 | 1           | 22       | 1   | Hermione Granger |
+| 3   | 1998-03-09 | 12:00:00   | 16:00:00 | 3           | 23       | 3   | Luna Lovegood    |
+| 8   | 1998-03-10 | 12:00:00   | 16:00:00 | 8           | 24       | 8   | Cho Chang        |
+| 4   | 1998-03-09 | 12:00:00   | 20:00:00 | 4           | 25       | 4   | Draco Malfoy     |
 
 
 Using this Adoption schema and data, please write queries to retrieve the following information and include the results:
@@ -98,13 +95,13 @@ ON volunteers.foster_dog_id = dogs.id
 
 **RESULTS**
 
-first_name | last_name | id | name
------------|-----------|----|-----
-Rubeus | Hagrid | 10002 | Munchkin
-Marjorie | Dursley | 10006 | Marmaduke
-Sirius | Black | null | null
-Remus | Lupin | null | null
-Albus | Dumbledore | null | null
+| first_name | last_name  | id    | name      |
+| ---------- | ---------- | ----- | --------- |
+| Rubeus     | Hagrid     | 10002 | Munchkin  |
+| Marjorie   | Dursley    | 10006 | Marmaduke |
+| Sirius     | Black      | null  | null      |
+| Remus      | Lupin      | null  | null      |
+| Albus      | Dumbledore | null  | null      |
 
 
 > The cat's name, adopter's name, and adopted date for each cat adopted within the past month to be displayed as part of the "Happy Tail" social media promotion which posts recent successful adoptions.SL
@@ -121,10 +118,10 @@ WHERE CAST(cat_adoptions.date AS DATE) >= CURRENT_DATE -30;
 
 **RESULTS**
 
-name | first_name | last_name
------|------------|----------
-Mushi | Arabella | Figg
-Victoire | Argus | Filch
+| name     | first_name | last_name |
+| -------- | ---------- | --------- |
+| Mushi    | Arabella   | Figg      |
+| Victoire | Argus      | Filch     |
 
 
 > Create a list of adopters who have not yet chosen a dog to adopt.
@@ -139,10 +136,10 @@ WHERE dog_adoptions.adopter_id IS null;
 
 **RESULTS**
 
-first_name | last_name
------------|----------
-Hermione | Granger
-Arabella | Figg
+| first_name | last_name |
+| ---------- | --------- |
+| Hermione   | Granger   |
+| Arabella   | Figg      |
 
 
 > Lists of all cats and all dogs who have not been adopted.
@@ -189,9 +186,9 @@ ON dogs.id = dog_adoptions.dog_id;
 
 **RESULTS**
 
-first_name | last_name
------------|----------
-Argus | Filch
+| first_name | last_name |
+| ---------- | --------- |
+| Argus      | Filch     |
 
 
 Using this Library schema and data, write queries applying the following scenarios and include the results:
@@ -209,10 +206,10 @@ WHERE books.title = 'Advanced Potion-Making'
 ORDER BY holds.rank;
 ```
 
-name | rank
------|-----
-Terry Boot | 1
-Cedric Diggory | 2
+| name           | rank |
+| -------------- | ---- |
+| Terry Boot     | 1    |
+| Cedric Diggory | 2    |
 
 
 > List all of the library patrons. If they have one or more books checked out, list the books with the patrons.
@@ -228,8 +225,8 @@ GROUP BY patrons.id, transactions.id;
 
 **Results**
 
-id | name | id | patron_id | isbn | checked_out_date | checked_in_date
----|------|----|-----------|------|------------------|----------------
-2 | Terry Boot | 5 | 2 | 9136884926 | 2018-07-15T00:00:00.000Z | null
-5 | Cedric Diggory | 7 | 5 | 3458400871 | 2018-07-17T00:00:00.000Z | null
+| id  | name           | id  | patron_id | isbn       | checked_out_date         | checked_in_date |
+| --- | -------------- | --- | --------- | ---------- | ------------------------ | --------------- |
+| 2   | Terry Boot     | 5   | 2         | 9136884926 | 2018-07-15T00:00:00.000Z | null            |
+| 5   | Cedric Diggory | 7   | 5         | 3458400871 | 2018-07-17T00:00:00.000Z | null            |
 
